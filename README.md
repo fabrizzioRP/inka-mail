@@ -1,0 +1,7 @@
+#### Modo IDLE y comando NOOP (son parte del protocol IMAP)
+
+- IDLE (En espera): El modo IDLE permite que el cliente de correo electrónico mantenga una conexión activa con el servidor sin necesidad de realizar consultas constantes. En lugar de solicitar información periódicamente, el cliente entra en un estado de espera (IDLE) y el servidor envía una notificación al cliente cuando ocurren cambios en la bandeja de entrada, como la llegada de un nuevo mensaje. Esto ayuda a ahorrar recursos y reduce la latencia al recibir notificaciones en tiempo real. Sin embargo, no todos los servidores IMAP admiten el modo IDLE.
+
+- NOOP (No operación): El comando NOOP es una operación no destructiva que se utiliza para mantener activa una conexión IMAP sin realizar ninguna acción real. Cuando el cliente envía un comando NOOP al servidor, este simplemente responde con un mensaje de éxito sin realizar ninguna acción adicional. El propósito principal del comando NOOP es evitar que la conexión se cierre por inactividad. Al enviar periódicamente comandos NOOP, el cliente puede mantener la conexión abierta y evitar que se agote el tiempo de espera.
+
+En resumen, el modo IDLE permite al cliente recibir notificaciones automáticas del servidor sobre eventos en tiempo real, como la llegada de nuevos mensajes, mientras que el comando NOOP se utiliza para mantener activa la conexión sin realizar ninguna operación adicional. Ambos mecanismos ayudan a mantener una conexión IMAP abierta sin gastar recursos innecesarios o sufrir desconexiones por inactividad.
