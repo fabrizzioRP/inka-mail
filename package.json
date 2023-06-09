@@ -4,7 +4,8 @@
   "description": "Gateway email",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node build/index.js",
+    "build": "tsc",
+    "start": "node build/index.js",
     "dev": "nodemon src/index.ts"
   },
   "dependencies": {
