@@ -12,6 +12,8 @@ app.get("/", (req: Request, res: Response) => res.json({ ok: true }));
 app.post("/incoming_mails/", (req: Request, res: Response) => {
   const mail = <IncomingMail>req.body;
 
+  console.log(mail);
+
   res.status(201).json(mail);
 });
 
